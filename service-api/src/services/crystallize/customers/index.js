@@ -1,6 +1,7 @@
-const create = require("./create-customer");
-const update = require("./update-customer");
-const get = require("./get-customer");
+const importSync = require('import-sync');
+const create = importSync("./create-customer");
+const update = importSync("./update-customer");
+const get = importSync("./get-customer");
 
 module.exports = {
   create,

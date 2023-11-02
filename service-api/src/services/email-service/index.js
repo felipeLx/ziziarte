@@ -1,7 +1,8 @@
-const { sendEmail } = require("./utils");
+const importSync = require('import-sync');
+const { sendEmail } = importSync("./utils");
 
-const sendOrderConfirmation = require("./order-confirmation");
-const sendUserMagicLink = require("./user-magic-link");
+const sendOrderConfirmation = importSync("./order-confirmation");
+const sendUserMagicLink = importSync("./user-magic-link");
 
 module.exports = {
   sendEmail,

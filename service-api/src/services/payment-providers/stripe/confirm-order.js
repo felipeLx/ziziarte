@@ -3,10 +3,11 @@ module.exports = async function confirmOrder({
   checkoutModel,
   context,
 }) {
-  const crystallize = require("../../crystallize");
-  const basketService = require("../../basket-service");
+  const importSync = require('import-sync');
+  const crystallize = importSync("../../crystallize");
+  const basketService = importSync("../../basket-service");
 
-  const toCrystallizeOrderModel = require("./to-crystallize-order-model");
+  const toCrystallizeOrderModel = importSync("./to-crystallize-order-model");
 
   const { basketModel } = checkoutModel;
   const { user } = context;

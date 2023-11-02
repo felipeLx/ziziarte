@@ -1,8 +1,9 @@
-const create = require("./create-order");
-const update = require("./update-order");
-const get = require("./get-order");
-const waitForOrderToBePersistated = require("./wait-for-order-to-be-persistated");
-const updateStock = require("./update-stock")
+const importSync = require('import-sync');
+const create = importSync("./create-order");
+const update = importSync("./update-order");
+const get = importSync("./get-order");
+const waitForOrderToBePersistated = importSync("./wait-for-order-to-be-persistated");
+const updateStock = importSync("./update-stock")
 
 module.exports = {
   create,

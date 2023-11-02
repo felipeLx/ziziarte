@@ -1,4 +1,5 @@
-const getCrystallizeVouchers = require("./crystallize-vouchers-example");
+const importSync = require("import-sync");
+const getCrystallizeVouchers = importSync("./crystallize-vouchers-example");
 
 /**
  * Example of a voucher register

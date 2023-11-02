@@ -1,3 +1,5 @@
+const importSync = require("import-sync");
+const { callCatalogueApi, callSearchApi } = importSync("../crystallize/utils");
 /**
  * Gets information for products using SKU for lookup.
  */
@@ -6,8 +8,9 @@ async function getProductsFromCrystallize({ skus, language }) {
     return [];
   }
 
-  const { callCatalogueApi, callSearchApi } = require("../crystallize/utils");
+  
 
+  // eslint-disable-next-line no-undef
   const pathsSet = new Set();
   let searchAfterCursor;
   async function getNextSearchPage() {

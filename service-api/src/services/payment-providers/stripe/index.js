@@ -1,5 +1,6 @@
-const createPaymentIntent = require("./create-payment-intent");
-const confirmOrder = require("./confirm-order");
+const importSync = require('import-sync');
+const createPaymentIntent = importSync("./create-payment-intent");
+const confirmOrder = importSync("./confirm-order");
 
 const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY;
 const STRIPE_PUBLISHABLE_KEY = process.env.STRIPE_PUBLISHABLE_KEY;

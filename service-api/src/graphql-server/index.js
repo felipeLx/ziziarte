@@ -1,6 +1,7 @@
-const createContext = require("./create-context");
-const resolvers = require("./resolvers");
-const typeDefs = require("./type-defs");
+const importSync = require("import-sync");
+const createContext = importSync("./create-context");
+const resolvers = importSync("./resolvers");
+const typeDefs = importSync("./type-defs");
 
 module.exports = function createGraphqlServerConfig({
   apiPathPrefix = "",

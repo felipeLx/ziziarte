@@ -1,4 +1,5 @@
-const invariant = require("invariant");
+const importSync = require('import-sync');
+const invariant = importSync("invariant");
 
 const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY;
 

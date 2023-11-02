@@ -1,6 +1,7 @@
-const invariant = require("invariant");
+const importSync = require("import-sync");
+const invariant = importSync("invariant");
 
-const crystallize = require("../crystallize");
+const crystallize = importSync("../crystallize");
 
 /**
  * Todo: link to good JWT intro

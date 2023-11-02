@@ -1,4 +1,5 @@
-const SellingPartnerAPI = require("amazon-sp-api");
+const importSync = require('import-sync');
+const SellingPartnerAPI = importSync("amazon-sp-api");
 
 // To get a new refresh token, go to the Seller Central / Develop Apps / App -> Authorise and get a new pair
 // Client ID and Secret are provided when creating the App

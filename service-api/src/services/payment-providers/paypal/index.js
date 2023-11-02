@@ -1,5 +1,6 @@
-const createPaypalPayment = require("./create-payment");
-const confirmPaypalPayment = require("./confirm-payment");
+const importSync = require('import-sync');
+const createPaypalPayment = importSync("./create-payment");
+const confirmPaypalPayment = importSync("./confirm-payment");
 
 const PAYPAL_CLIENT_ID = process.env.PAYPAL_CLIENT_ID;
 const PAYPAL_CLIENT_SECRET = process.env.PAYPAL_CLIENT_SECRET;
