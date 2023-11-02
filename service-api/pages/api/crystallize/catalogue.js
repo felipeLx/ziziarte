@@ -10,8 +10,9 @@
  * picked up by someone else
  */
 
-import { callCatalogueApi } from "../../../src/services/crystallize/utils";
-import cors from "../../../lib/cors";
+const { importSync } = require("import-sync");
+const { callCatalogueApi } = importSync("../../../lib/crystallize/utils");
+const cors = importSync("../../../lib/cors");
 
 async function CrystallizeAPIProxy(req, res) {
   const r = await callCatalogueApi(req.body);

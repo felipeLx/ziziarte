@@ -4,10 +4,11 @@ module.exports = function stripeToCrystallizeOrderModel({
   payment,
   paymentIntent,
 }) {
+  const importSync = require("import-sync");
   const {
     paymentToPaymentInput,
     createBasket,
-  } = require("../../crystallize/utils");
+  } = importSync("../../crystallize/utils");
 
   const totalValue = paymentIntent.amount / 100;
   const currency = String(paymentIntent.currency).toUpperCase();

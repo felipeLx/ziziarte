@@ -10,8 +10,9 @@
  * picked up by someone else
  */
 
-import { callSearchApi } from "../../../src/services/crystallize/utils";
-import cors from "../../../lib/cors";
+const { importSync } = require("import-sync");
+const { callSearchApi } =  importSync("../../../src/services/crystallize/utils");
+const cors = importSync("../../../lib/cors");
 
 async function CrystallizeAPIProxy(req, res) {
   const r = await callSearchApi(req.body);

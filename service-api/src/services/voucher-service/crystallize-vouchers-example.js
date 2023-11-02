@@ -1,4 +1,5 @@
-const { callCatalogueApi } = require("../crystallize/utils");
+const {importSync} = require("import-sync");
+const { callCatalogueApi } = importSync("../crystallize/utils");
 
 /**
  * Example of how to use Crystallize to store and
